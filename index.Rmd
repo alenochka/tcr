@@ -1,0 +1,40 @@
+---
+title: "Supplementary repository for Dewolf, _et al._ 2022"
+date: "`r Sys.Date()`"
+output:
+  bookdown::gitbook: 
+    css: pagewidth.css
+    fig_width: 10
+    fig_height: 6
+editor_options: 
+  chunk_output_type: console
+documentclass: book
+site: bookdown::bookdown_site
+---
+# Introduction
+
+This repository contains the analyses presented in the manuscript and the code to generate the figures. 
+
+## Installation
+
+For reproducibility, `renv` was used to lock packages used.  After cloning the repo, restore from the lock file using `renv::restore()` to hopefully operate under the same environment.
+
+
+## Contents
+- `00-preprocess-TCR.Rmd` describes how to download data from Adaptive, merges the raw files, and parses some of the sample metadata. It creates a file 
+- `10-tables.Rmd` tabulates sample summary table S4 and sample pair statistics for tables S6 (human) and S12 (mouse)
+- `20-exploratory-trees.Rmd` assesses cross sample and cross individual pairwise comparisons of repertoire overlap
+- `21-figure1.Rmd` generates the data summary figures found in Figure 1 and supplementary
+- `22-figure2.Rmd` generates the trees, scatterplots, and heatmaps found in Figure 2
+- `23-figure3-S4-S5.Rmd` generates all the alluvial plots
+- `24-figure4.Rmd` generates all the venn diagrams of clone overlap
+- `25-figure5-S7-VECTRA.Rmd` generates the plots of cell types from the imaging data.  The imaging data is not public, but this is included for analysis transparency
+- `30-figureS2.Rmd` generates the plots showing the clinical features and JSD
+- `32-FigureS12B-S12C-assess-cell-types.Rmd` generates the analysis for assessing cell types based on the v and j gene alleles
+- `33-figureS3.Rmd` generates the plot of JSD vs Morisitta index
+- `37-figureS12D-abundance.Rmd` generates the accumulation curves of top 10 clones in each sample
+- `38-figureS4P-tableS5-UC-TCRs.Rmd` generates the plots involving the UC cohort described in [Werner, et al. 2018](https://doi.org/10.21417/LW2019CEI)
+- `39-figure-S3-S8-S11.Rmd` contains the "between vs within tissues" analysis assessing pairs of tissues's JSD score with their anatomic grouping
+- `41-figureS12A-addressing-questions-of-sampling-depth.Rmd` generates the species accumulation curves and PreseqR predictions of library complexity 
+- `index.Rmd` is this document
+
